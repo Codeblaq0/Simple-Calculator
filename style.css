@@ -18,12 +18,13 @@
     background: #000;
     padding: 20px;
     border-radius: 20px;
-
+    width: 100%;
+    max-width: 400px;
 }
 
 .calculator form input{
     border: 0;
-    outline: 0;
+    outline: 1px solid white;
     width: 60px;
     height: 60px;
     border-radius: 10px;
@@ -48,11 +49,34 @@ form .display input{
     box-shadow: none;
 }
 
- form input.equal{
+form input.equal{
     width: 145px;
     background-color: orange;
 }
 
 form input.operator{
     color: #33ffd8;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .calculator form input {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    form .display input {
+        font-size: 35px;
+    }
+
+    form input.equal {
+        width: 120px;
+    }
 }
